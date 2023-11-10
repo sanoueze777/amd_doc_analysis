@@ -9,7 +9,6 @@ from google.cloud import aiplatform
 key_path = st.secrets["account_key"]
 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = key_path
-my_credentials, project_id = google.auth.default()
 
 aiplatform.init(
     # your Google Cloud Project ID or number
@@ -24,9 +23,6 @@ aiplatform.init(
     # used to stage artifacts
     staging_bucket='gs://amddoc',
 
-    # custom google.auth.credentials.Credentials
-    # environment default credentials used if not set
-    credentials=my_credentials,
 
 )
 
