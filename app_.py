@@ -26,6 +26,16 @@ aiplatform.init(
 
 )
 
+st.markdown(
+    """
+    <style>
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 
 def create_session():
     vertexai.init(project="amdanalysedocumentaire", location="us-central1")
