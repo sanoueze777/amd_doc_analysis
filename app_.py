@@ -1,7 +1,35 @@
 import streamlit as st
 from vertexai.preview.language_models import ChatModel, ChatSession
+import os
 
 import vertexai
+
+from google.cloud import aiplatform
+
+key_path = st.secrets["account_key"]
+
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = key_path
+my_credentials, project_id = google.auth.default()
+
+aiplatform.init(
+    # your Google Cloud Project ID or number
+    # environment default used is not set
+    project='amdanalysedocumentaire',
+
+    # the Vertex AI region you will use
+    # defaults to us-central1
+    location='us-central1',
+
+    # Google Cloud Storage bucket in same region as location
+    # used to stage artifacts
+    staging_bucket='gs://amddoc',
+
+    # custom google.auth.credentials.Credentials
+    # environment default credentials used if not set
+    credentials=my_credentials,
+
+)
+
 
 def create_session():
     vertexai.init(project="amdanalysedocumentaire", location="us-central1")
