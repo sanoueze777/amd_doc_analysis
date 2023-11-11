@@ -27,11 +27,10 @@ st.markdown(
 st.sidebar.title("Instructions")
 st.sidebar.write("Bonjour cher Agent de AMD, je suis ravi de vous revoir.")
 st.sidebar.write("Je suis l'assistant opérationnel de AMD International, et je peux vous aider à effectuer les taches suivantes:")
-st.sidebar.write("Effectuer une analyse d'un document spécifique, effectuer une analyse d'un concept et d'une entité liée aux finances pupliques,")
-st.sidebar.write("politiques publiques, ou tout autre domaine d'activités de AMD International.")
+st.sidebar.write("Effectuer une analyse d'un document spécifique, effectuer une analyse d'un concept et d'une entité liée aux finances pupliques,politiques publiques, ou tout autre domaine d'activités de AMD International.")
 st.sidebar.write("Je peux également vous aider à rédiger vos rapports et analyses qualitatives, pourvu que les documents contenant les informations requises fassent partie du gestionnaire de documents.")
 st.sidebar.write("Afin de me permettre de mieux vous appuyer dans l'exécution de vos taches, assurez vous de me fournir les documents nécessaires et à jour dans le gestionnaire de documents.")
-st.sidebar.write("En cas de difficultés, veuillez contacter le Service des Systèmes d'Informations, Data et Intelligence Artificielle au +226 25 46 55 02.")
+st.sidebar.write("En cas de difficultés, veuillez contacter le Service des Systèmes d'Informations, Data et Intelligence Artificielle de AMD International au +226 25 46 55 02.")
 key_path = st.secrets["account_key"]
 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = key_path
