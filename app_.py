@@ -5,7 +5,33 @@ import os
 import vertexai
 
 from google.cloud import aiplatform
+import streamlit.components.v1 as components
 
+# Your existing Streamlit app content goes here
+
+# Add a blue sidebar with instructions
+st.markdown(
+    """
+    <style>
+        .sidebar {
+            background-color: #3498db;  /* Blue color */
+            padding: 20px;
+            color: #fff;  /* White text */
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Instructions in the blue sidebar
+st.sidebar.title("Instructions")
+st.sidebar.write("Bonjour cher Agent de AMD, je suis ravi de vous revoir.")
+st.sidebar.write("Je suis l'assistant opérationnel de AMD International, et je peux vous aider à effectuer les taches suivantes:")
+st.sidebar.write("Effectuer une analyse d'un document spécifique, effectuer une analyse d'un concept et d'une entité liée aux finances pupliques,")
+st.sidebar.write("politiques publiques, ou tout autre domaine d'activités de AMD International.")
+st.sidebar.write("Je peux également vous aider à rédiger vos rapports et analyses qualitatives, pourvu que les documents contenant les informations requises fassent partie du gestionnaire de documents.")
+st.sidebar.write("Afin de me permettre de mieux vous appuyer dans l'exécution de vos taches, assurez vous de me fournir les documents nécessaires et à jour dans le gestionnaire de documents.")
+st.sidebar.write("En cas de difficultés, veuillez contacter le Service des Systèmes d'Informations, Data et Intelligence Artificielle au +226 25 46 55 02.")
 key_path = st.secrets["account_key"]
 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = key_path
